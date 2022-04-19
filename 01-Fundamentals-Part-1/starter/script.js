@@ -26,3 +26,12 @@ console.log(markBMI1, jhonBMI1);
 console.log(markBMI2, jhonBMI2);
 console.log(markHigherBMI1);
 console.log(markHigherBMI2); */
+
+const age = 17;
+const legalAge = 18;
+
+if (age >= legalAge) {
+    console.log("You are legal.");
+} else {
+    console.log(`You need ${legalAge - age} more years to be able to drive.`);
+}
