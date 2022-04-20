@@ -27,11 +27,30 @@ console.log(markBMI2, jhonBMI2);
 console.log(markHigherBMI1);
 console.log(markHigherBMI2); */
 
-const age = 17;
+/*const age = 17;
 const legalAge = 18;
 
 if (age >= legalAge) {
     console.log("You are legal.");
 } else {
     console.log(`You need ${legalAge - age} more years to be able to drive.`);
-}
+} */
+
+/* //Coding challenge #2
+const markWeight1 = 78;
+const markHeight1 = 1.69;
+const jhonWeight1 = 92;
+const jhonHeight1 = 1.95;
+
+const markBMI1 = markWeight1 / (markHeight1 ** 2);
+const jhonBMI1 = jhonWeight1 / (jhonHeight1 ** 2);
+
+if (markBMI1 > jhonBMI1) {
+    console.log(`Mark's BMI (${markBMI1}) is higher than John's (${jhonBMI1})!`);
+} else {
+    if (jhonBMI1 > markBMI1) {
+        console.log(`Jhon's BMI (${jhonBMI1}) is higher than Mark's (${markBMI1})!`);
+    } else {
+        console.log(`Mark's and Jhon's BMI is the same (${jhonBMI1})`);
+    }
+} */

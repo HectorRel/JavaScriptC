@@ -1,4 +1,4 @@
-/* //LECTURE: Values and Variables
+/* //LECTURE: Values and Variables 
 const country = 'Mexico';
 const continent = 'America';
 let population = 131;
@@ -35,4 +35,10 @@ console.log(averagePopulation > halfPopulation);
 //LECTURE: Strings and Template Literals
 const description = `${country} is in ${continent}, and its ${population} people speak ${language}.`;
 console.log(description);
-*/
+
+//LECTURE: Taking Decisions: if / else Statements
+if (population > 33) {
+    console.log(`${country}'s population is above average.`);
+} else {
+    console.log(`${country}'s population is ${33 - population} million below average.`);
+} */
