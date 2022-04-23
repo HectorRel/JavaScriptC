@@ -54,7 +54,7 @@ if (markBMI1 > jhonBMI1) {
         console.log(`Mark's and Jhon's BMI is the same (${jhonBMI1})`);
     }
 } */
-
+/*
 //Coding Challenge #3
 const scoreDolphin1 = (96 + 108 + 89) / 3;
 const scoreDolphin2 = (97 + 112 + 101) / 3;
@@ -96,4 +96,24 @@ if (scoreDolphin3 > scoreKoalas3 && scoreDolphin3 >= 100) {
     console.log(`There is a draw with a score of ${scoreDolphin3}.`);
 } else {
     console.log('No team wins the trophy.');
-}
+} */
+
+/* //Example
+const day = 'sunday';
+if (day === 'monday') {
+    console.log('monday');
+} else if (day === 'tuesday') {
+    console.log('tuesday');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('wednesday or thursday');
+} else if (day === 'friday') {
+    console.log('friday');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Rest days');
+} */
+
+/* //Coding Challenge #4
+
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`); */

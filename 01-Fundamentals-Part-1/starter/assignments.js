@@ -41,4 +41,8 @@ if (population > 33) {
     console.log(`${country}'s population is above average.`);
 } else {
     console.log(`${country}'s population is ${33 - population} million below average.`);
-} */
+} 
+//LECTURE: The Conditional (Ternary) Operator
+const population = 20;
+console.log(`Mexico's population is ${population > 33 ? 'above' : 'below'} average.`);
+*/
