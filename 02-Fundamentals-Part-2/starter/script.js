@@ -27,3 +27,19 @@ console.log(percentageOfWorld2(500), percentageOfWorld2(30), percentageOfWorld2(
 /* // LECTURE: Arrow Functions
 const percentageOfWorld3 = population => population / 7900 * 100;
 console.log(percentageOfWorld3(3000)); */
+
+/* // LECTURE: Functions Calling Other Functions
+
+function percentageOfWorld1(population) {
+    return population / 7900 * 100;
+}
+
+function describePopulation(country, population) {
+    const percentageOfWorld = percentageOfWorld1(population);
+    return `${country} has ${population} million people, which is about ${percentageOfWorld}% of the world.`;
+}
+console.log(describePopulation('Mexico', 350));
+console.log(describePopulation('Canada', 5000));
+console.log(describePopulation('Peru', 1000)); */
+
+// Coding Challenge #1
