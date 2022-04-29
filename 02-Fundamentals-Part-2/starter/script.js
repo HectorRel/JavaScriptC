@@ -99,3 +99,35 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills);
 console.log(tips);
 console.log(totals); */
+
+/* //LECTURE: Introduction to Objects
+ const myCountry = {
+    country: 'Mexico',
+    capital: 'CDMX',
+    language: 'Spanish',
+    population: 131,
+    neighbours: ['USA', 'Guatemala', 'Belice']
+}; */
+
+/* //Challenge Objects video
+const jonas = {
+    firstName: 'Jonas',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`); */
+
+/* //LECTURE: Dot vs. Bracket Notation
+const myCountry = {
+    country: 'Mexico',
+    capital: 'CDMX',
+    language: 'Spanish',
+    population: 131,
+    neighbours: ['USA', 'Guatemala', 'Belice']
+};
+
+myCountry.population += 2;
+myCountry['population'] -= 2;
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`); */
+
