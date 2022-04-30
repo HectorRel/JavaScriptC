@@ -242,7 +242,7 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
     }
 } */
 
-// LECTURE: The while Loop
+/* // LECTURE: The while Loop
 const populations = [300, 5000, 3000, 40];
 const percentages3 = [];
 let i = 0;
@@ -256,6 +256,7 @@ console.log(percentages);
 
 while (i < populations.length) {
     percentages3[i] = percentageOfWorld1(populations[i]);
+    i++;
 }
 
-console.log(percentages3);
+console.log(percentages3); */
