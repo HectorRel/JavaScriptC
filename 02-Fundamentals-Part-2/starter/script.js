@@ -131,3 +131,113 @@ myCountry['population'] -= 2;
 
 console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`); */
 
+/* //Challenge Methods video
+const hector = {
+    firstName: 'Hector',
+    birthYear: 1996,
+    job: 'Programmer',
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function () {
+        this.calcAge();
+        this.hasDriversLicense = this.age >= 18 ? true : false;
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
+    }
+}
+
+
+console.log(hector.getSummary()); */
+
+/* //Coding Challenge #3
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height ** 2);
+        return this.BMI;
+    }
+}
+
+const jhon = {
+    fullName: 'Jhon Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height ** 2);
+        return this.BMI;
+    }
+}
+
+console.log(mark.calcBMI(), jhon.calcBMI());
+mark.calcBMI();
+jhon.calcBMI();
+
+if (mark.BMI > jhon.BMI) {
+    console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${jhon.fullName}'s (${jhon.BMI})!`);
+} else if (jhon.BMI > mark.BMI) {
+    console.log(`${jhon.fullName}'s BMI (${jhon.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})!`);
+} else {
+    console.log(`Both ${mark.fullName} and ${jhon.fullName} have the same BMI (${mark.BMI})!`);
+} */
+
+/* //LECTURE: Object Methods
+const myCountry = {
+    country: 'Mexico',
+    capital: 'CDMX',
+    language: 'Spanish',
+    population: 131,
+    neighbours: ['USA', 'Guatemala', 'Belice'],
+
+    describe: function () {
+        console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
+    },
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length > 0 ? false : true;
+        return this.isIsland;
+    }
+};
+
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry.isIsland); */
+
+/* //LECTURE: Iteration: The for Loop
+for (let i = 0; i < 50; i++) {
+    console.log(`Voter number ${i + 1} is currently voting`);
+} */
+
+/* // LECTURE: Looping Arrays, Breaking and Continuing
+const populations = [300, 5000, 3000, 40];
+const percentages2 = [];
+function percentageOfWorld1(population) {
+    return population / 7900 * 100;
+}
+const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[populations.length - 1])];
+console.log(percentages);
+
+for (let i = 0; i < populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2); */
+
+//LECTURE: Looping Backwards and Loops in Loops
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    console.log(i);
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+        console.log(i, j);
+    }
+}
