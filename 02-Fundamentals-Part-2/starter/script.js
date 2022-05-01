@@ -260,3 +260,31 @@ while (i < populations.length) {
 }
 
 console.log(percentages3); */
+
+/* //Coding Challenge #4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * .15;
+    } else {
+        return bill * .2;
+    }
+}
+
+const calcAverage = function (arr) {
+    let average = 0;
+    for (let i = 0; i < arr.length; i++) {
+        average += arr[i];
+    }
+    return average / arr.length;
+}
+
+for (let i = 0; i < bills.length; i++) {
+    tips[i] = calcTip(bills[i]);
+    totals[i] = tips[i] + bills[i];
+}
+console.log(tips, totals, bills);
+console.log(calcAverage(bills), calcAverage(tips), calcAverage(totals)); */
