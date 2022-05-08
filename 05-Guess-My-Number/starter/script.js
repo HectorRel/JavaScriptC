@@ -1,43 +1,57 @@
 'use strict';
-const randomizeNum = function() {
-    return Math.round(Math.random()*20);
+const randomizeNum = function () {
+    return (Math.trunc(Math.random() * 20)) + 1;
+}
+const displayMessage = function (message) {
+    document.querySelector('.message').textContent = message;
 }
 let numToGuess = randomizeNum();
-let score = Number (document.querySelector('.score').textContent);
-let highscore = Number (document.querySelector('.highscore').textContent);
+let score = Number(document.querySelector('.score').textContent);
+let highscore = Number(document.querySelector('.highscore').textContent);
+let winCheck = false;
 console.log(numToGuess);
 
 //Managing Check boton
-document.querySelector('.check').addEventListener('click', function() {
+document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(document.querySelector('.guess').value);
-    if (guess === numToGuess){
-        document.querySelector('.message').textContent = 'Correct number!!!!';
-        document.querySelector('body').style.backgroundColor = 'green';
+
+    //When player wins
+    if (guess === numToGuess) {
+        displayMessage('Correct number!!!!');
+        document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').textContent = `${numToGuess}`;
-        if(score > highscore) {
+        winCheck = true;
+        if (score > highscore) {
             highscore = score;
             document.querySelector('.highscore').textContent = `${highscore}`;
         }
-    } else if(guess > numToGuess && guess <= 20) {
-        document.querySelector('.message').textContent = 'Too high!';
-        score -= 1;
-    } else if(guess < numToGuess && guess <= 20) {
-        document.querySelector('.message').textContent = 'Too low!';
-        score -= 1;
-    } else {
-        document.querySelector('.message').textContent = 'Between 1 and 20'
+        //When number is diferent than guess
+    } else if (guess !== numToGuess && guess <= 20 && guess >= 1 && !winCheck) {
+        score--;
+        displayMessage(guess > numToGuess ? 'Too high!' : 'Too low!');
+        if (score >= 1) {
+            document.querySelector('.score').textContent = `${score}`;
+        } else if (score < 1) { //When player loses
+            document.querySelector('body').style.backgroundColor = '#B20000';
+            document.querySelector('.score').textContent = 0;
+            document.querySelector('.number').style.width = '70rem';
+            document.querySelector('.number').textContent = 'Game over ☠';
+            displayMessage("Press Again! to restart");
+        }
+    } else if ((guess > 20 || guess < 1) && !winCheck) {
+        displayMessage('Between 1 and 20');
     }
-    document.querySelector('.score').textContent = `${score}`;
 });
-
 //Managing Again boton
-document.querySelector('.again').addEventListener('click', function() {
+document.querySelector('.again').addEventListener('click', function () {
     numToGuess = randomizeNum();
     score = 20;
+    winCheck = false;
     console.log(numToGuess);
     document.querySelector('body').style.backgroundColor = '#222';
-    document.querySelector('.message').textContent = 'Start guessing...';
+    displayMessage('Start guessing...');
     document.querySelector('.guess').value = '';
     document.querySelector('.number').textContent = '?';
     document.querySelector('.score').textContent = '20';
+    document.querySelector('.number').style.width = '15rem';
 });
