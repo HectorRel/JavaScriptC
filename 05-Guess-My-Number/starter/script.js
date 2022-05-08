@@ -5,6 +5,9 @@ const randomizeNum = function () {
 const displayMessage = function (message) {
     document.querySelector('.message').textContent = message;
 }
+const changeBackColor = function (color) {
+    document.querySelector('body').style.backgroundColor = color;
+}
 let numToGuess = randomizeNum();
 let score = Number(document.querySelector('.score').textContent);
 let highscore = Number(document.querySelector('.highscore').textContent);
@@ -18,7 +21,7 @@ document.querySelector('.check').addEventListener('click', function () {
     //When player wins
     if (guess === numToGuess) {
         displayMessage('Correct number!!!!');
-        document.querySelector('body').style.backgroundColor = '#60b347';
+        changeBackColor('#60b347');
         document.querySelector('.number').textContent = `${numToGuess}`;
         winCheck = true;
         if (score > highscore) {
@@ -32,7 +35,7 @@ document.querySelector('.check').addEventListener('click', function () {
         if (score >= 1) {
             document.querySelector('.score').textContent = `${score}`;
         } else if (score < 1) { //When player loses
-            document.querySelector('body').style.backgroundColor = '#B20000';
+            changeBackColor('#B20000');
             document.querySelector('.score').textContent = 0;
             document.querySelector('.number').style.width = '70rem';
             document.querySelector('.number').textContent = 'Game over ☠';
@@ -48,7 +51,7 @@ document.querySelector('.again').addEventListener('click', function () {
     score = 20;
     winCheck = false;
     console.log(numToGuess);
-    document.querySelector('body').style.backgroundColor = '#222';
+    changeBackColor('#222');
     displayMessage('Start guessing...');
     document.querySelector('.guess').value = '';
     document.querySelector('.number').textContent = '?';
